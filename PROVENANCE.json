@@ -1,32 +1,30 @@
 {
-  "release_tag": "xray_release_v1.3",
-  "release_date": "2026-09-09",
+  "release_tag": "xray_release_v1.4",
+  "release_date": "2026-09-10",
   "pipeline_version": "xray_pipeline_v1.1_production",
   "config_used": "configs/config_refined_z_release.yaml",
   "source_release": "outputs/release_v1.2 (cosmos-web-xray-igm)",
   "parent_catalogs": {
     "CW-All": "Toni et al. (2025), AMICO group catalog",
-    "CW-HCG": "Hasinger et al. (in prep.), Py20_Groups_release.fits (Hickson compact-group catalog)"
+    "CW-HCG": "Hasinger et al. (in prep.), Hickson compact-group catalog"
   },
-  "scope_note": "This release contains group-level X-ray measurements and derived properties only. It does NOT include any membership, BGG/BCG, dynamical-mass, or cross-group-multiplicity information; those are scoped to a separate companion release.",
+  "scope_note": "Compact release: individually X-ray-detected (SNR >= 2.0) groups only, with exactly the columns shown in Paper I Table A.1/A.2 (ID, RA, Dec, z, SNR, flux, L_X, T_X, and the Leroy et al. 2026 luminosity-based M200/R500/R200). Does not include non-detections/upper limits, background diagnostics, binned/stacking columns, the temperature-based mass alternative, or richness/provenance columns.",
   "outputs": {
     "CW-All": {
-      "fits": "CW-All_xray_catalog_public_v1.3.fits",
-      "csv": "CW-All_xray_catalog_public_v1.3.csv",
-      "n_rows": 1678,
-      "n_cols": 90,
-      "n_detected": 499,
-      "sha256_fits": "e5fd66ec44c69e9934ce867574dea6f1db911fd6910c7ca9d5562eba3b1397d9",
-      "sha256_csv": "5fd1f3a20c7f20125a39e2fe005b952711f4bf09b22193253215fc23ba5fddc8"
+      "fits": "CW-All_xray_catalog_public_v1.4.fits",
+      "csv": "CW-All_xray_catalog_public_v1.4.csv",
+      "n_rows": 499,
+      "n_cols": 18,
+      "sha256_fits": "c32a67439b5e05cd847ed9b562ece257a9381b443c2f74f99c5d3da4af2f10e5",
+      "sha256_csv": "62fe59e0c0053726f94a46423be4229031a4d789dce2ba227758ed0169ba6932"
     },
     "CW-HCG": {
-      "fits": "CW-HCG_xray_catalog_public_v1.3.fits",
-      "csv": "CW-HCG_xray_catalog_public_v1.3.csv",
-      "n_rows": 993,
-      "n_cols": 82,
-      "n_detected": 332,
-      "sha256_fits": "02918c85abe06453c616920f4a5197d25f73199d54080f9fe8ac2707223ad568",
-      "sha256_csv": "f10d2150c4129a0143dc79c31002274fd00c296369f74ebc7a3ca348a9aa9f69"
+      "fits": "CW-HCG_xray_catalog_public_v1.4.fits",
+      "csv": "CW-HCG_xray_catalog_public_v1.4.csv",
+      "n_rows": 332,
+      "n_cols": 18,
+      "sha256_fits": "1673c9b5bb944586ec92385052fbfa93ebab661e34e7dd0e80bcb6aeb61ae9c8",
+      "sha256_csv": "a710ad7b402ff617d9924dfe21ed52bd3a760517f7b9446b08b37e2d675006ca"
     }
   }
 }
