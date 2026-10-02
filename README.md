@@ -1,13 +1,10 @@
-# COSMOS-Web Galaxy Group X-ray Catalog — Public Release (v1.4)
+# COSMOS-Web Galaxy Group X-ray Catalog — Public Release 
 
-Companion data release for **Gozaliasl et al., Paper I: "The COSMOS-Web Galaxy Group X-ray Catalog:
-Construction, Pipeline, and Data Release"**.
+Companion data release for **Gozaliasl et al., Paper I: "The COSMOS-Web Galaxy Group X-ray Catalog: Data Release"**.
 
 This release contains the individually X-ray-detected (SNR ≥ 2.0) groups from the two COSMOS-Web
 group catalogs, with exactly the columns shown in Table A.1 (CW-HCG) and Table A.2 (CW-All) of the
-paper. It supersedes the earlier v1.3 release, which carried the full internal column set (all
-groups, both mass-estimation methods, background/quality diagnostics, binned columns); this v1.4
-release is the compact, paper-matching subset instead.
+paper. 
 
 ## Files
 
@@ -41,14 +38,8 @@ diagnostics, binned/stacking-analysis columns, the temperature-based mass altern
 membership/richness/provenance information. Those remain part of the full internal pipeline output
 and are documented in the companion papers of this series as they are used.
 
-## Provenance
-
-Built from `cosmos-web-xray-igm` pipeline output (`xray_pipeline_v1.1_production`,
-`configs/config_refined_z_release.yaml`), release tag `xray_release_v1.4`. Mass and radii use the
-luminosity-based ($M$–$L_{\rm X}$) estimate throughout, matching what Tables A.1/A.2 and the rest of
-the paper (Figs. 2, 4; Sects. 4–6) adopt as the primary mass estimate. See `PROVENANCE.json` for
-file checksums.
 
 ## Citation
 
-If you use this catalog, please cite Gozaliasl et al. (Paper I, in preparation).
+If you use this catalog, please cite Gozaliasl et al. (Paper I).
+for further info contact ghassem.gozaliasl@aalto.fi
