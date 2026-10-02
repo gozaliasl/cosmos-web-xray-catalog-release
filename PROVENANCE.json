@@ -8,23 +8,4 @@
     "CW-All": "Toni et al. (2025), AMICO group catalog",
     "CW-HCG": "Hasinger et al. (in prep.), Hickson compact-group catalog"
   },
-  "scope_note": "Compact release: individually X-ray-detected (SNR >= 2.0) groups only, with exactly the columns shown in Paper I Table A.1/A.2 (ID, RA, Dec, z, SNR, flux, L_X, T_X, and the Leroy et al. 2026 luminosity-based M200/R500/R200). Does not include non-detections/upper limits, background diagnostics, binned/stacking columns, the temperature-based mass alternative, or richness/provenance columns.",
-  "outputs": {
-    "CW-All": {
-      "fits": "CW-All_xray_catalog_public_v1.4.fits",
-      "csv": "CW-All_xray_catalog_public_v1.4.csv",
-      "n_rows": 499,
-      "n_cols": 18,
-      "sha256_fits": "c32a67439b5e05cd847ed9b562ece257a9381b443c2f74f99c5d3da4af2f10e5",
-      "sha256_csv": "62fe59e0c0053726f94a46423be4229031a4d789dce2ba227758ed0169ba6932"
-    },
-    "CW-HCG": {
-      "fits": "CW-HCG_xray_catalog_public_v1.4.fits",
-      "csv": "CW-HCG_xray_catalog_public_v1.4.csv",
-      "n_rows": 332,
-      "n_cols": 18,
-      "sha256_fits": "1673c9b5bb944586ec92385052fbfa93ebab661e34e7dd0e80bcb6aeb61ae9c8",
-      "sha256_csv": "a710ad7b402ff617d9924dfe21ed52bd3a760517f7b9446b08b37e2d675006ca"
-    }
-  }
 }
