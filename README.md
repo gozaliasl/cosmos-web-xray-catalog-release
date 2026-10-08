@@ -64,7 +64,7 @@ Also new: `L_X` within R200 (`L_X_R200_*`), `SNR_R500`, `SNR_R200`. The detected
 
 ## Scope
 
-This release intentionally reproduces only the columns and (individually detected) sample shown in
+This release intentionally reproduces only the (individually detected) sample and the columns shown in
 Tables A.1/A.2 of the paper. It does **not** include: non-detections/upper limits, background
 diagnostics, binned/stacking-analysis columns, the temperature-based mass alternative, or
 membership/richness/provenance information. Those remain part of the full internal pipeline output
