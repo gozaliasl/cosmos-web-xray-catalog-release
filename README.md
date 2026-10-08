@@ -15,7 +15,7 @@ This revision **changes values** in the v1.4 files, because two problems in the 
 2. The earlier CW-All masses used the Leauthaud et al. (2010) relation. All masses (both catalogs) now follow the Leroy et al. (2026)
    relation, $E(z)\,M_{200} = 10^{0.138}\times10^{14}\,M_\odot\,[L_{\rm X}/E(z)/10^{43}\,{\rm erg\,s^{-1}}]^{0.759}$ (0.133 dex scatter), applied to the R500-aperture luminosity.
 
-Also new: `L_X` within R200 (`L_X_R200_*`), `SNR_R500`, `SNR_R200`. The detected sample (499 / 332 groups) is unchanged.
+Also new: `L_X` within R200 (`L_X_R200_*`, `C_beta_R200`) and `SNR_R500`. The detected sample (499 / 332 groups) is unchanged.
 
 ## How the apertures are defined
 
@@ -23,8 +23,10 @@ Also new: `L_X` within R200 (`L_X_R200_*`), `SNR_R500`, `SNR_R200`. The detected
 2. **R500 aperture:** R500 is derived once from the 300 kpc luminosity (Leroy et al. 2026), converted to an angle with each group's
    angular-diameter distance, and the counts are re-extracted there (`Aperture_kpc`; 300 kpc kept if within 10%; bounded to 5″–120″,
    binding for only 5 groups). Background annulus 2–3 R500. The measurement is re-centred on the X-ray peak only if the peak is within 0.3 R500 of the optical position.
-3. **R200 aperture:** R200 from the same 300 kpc luminosity; counts, flux and L_X re-extracted within it (`Aperture_R200_kpc`, up to 300″).
-   `L_X_R200` is **noisier and more affected by unrelated emission** than `L_X`; its median is ≈2× `L_X` (R500). Use `SNR_R200` to judge each value.
+3. **L_X within R200:** following Finoguenov et al. (2007, 2009), the 300 kpc flux is extrapolated to R200 with a β-model
+   (β = 0.4 (kT/1 keV)^(1/3), r_core = 0.07 (kT/1 keV)^0.63 R500), iterating the extrapolation factor, L_X, T and R500
+   through the scaling relations until R500 changes by <0.1% (all groups converge; no counts are re-extracted).
+   `C_beta_R200` is the extrapolation factor. The median `L_X_R200` / `L_X` is ≈1.3.
 4. The reported `R500_kpc`, `R200_kpc` and `log_M200_Msun` are computed from `L_X` (R500), so they differ slightly from the aperture radii used.
    The aperture exceeds the reported R500 by >10% for 44% (CW-All) / 29% (CW-HCG) of the groups.
 
@@ -51,10 +53,9 @@ Also new: `L_X` within R200 (`L_X_R200_*`), `SNR_R500`, `SNR_R200`. The detected
 | `Aperture_kpc` | Radius of the aperture used for `f_X` and `L_X` (R500 from the first-pass luminosity via Leroy et al. 2026; 300 kpc if within 10%) | kpc |
 | `L_X_300kpc_erg_s`, `L_X_300kpc_Error` | Luminosity in the fixed 300 kpc first-pass aperture (for comparison) and 1σ error | erg s⁻¹ |
 | `SNR_R500` | Significance of the counts re-extracted within the R500-based aperture | — |
-| `Aperture_R200_kpc` | Radius of the R200 aperture (R200 from the 300 kpc luminosity) | kpc |
-| `f_X_R200_erg_cm2_s`, `f_X_R200_Error` | Observed-frame 0.5–2 keV flux within R200 and 1σ error | erg cm⁻² s⁻¹ |
-| `L_X_R200_erg_s`, `L_X_R200_Error` | Rest-frame, K-corrected 0.5–2 keV luminosity within R200 and 1σ error (noisy; see above) | erg s⁻¹ |
-| `SNR_R200` | Significance of the counts re-extracted within R200 | — |
+| `f_X_R200_erg_cm2_s`, `f_X_R200_Error` | Observed-frame 0.5–2 keV flux within R200 (β-model extrapolation of the 300 kpc flux) and 1σ error | erg cm⁻² s⁻¹ |
+| `L_X_R200_erg_s`, `L_X_R200_Error` | Rest-frame, K-corrected 0.5–2 keV luminosity within R200 and 1σ error | erg s⁻¹ |
+| `C_beta_R200` | β-model extrapolation factor from the 300 kpc aperture to R200 | — |
 | `T_X_keV`, `T_X_Error` | Spectral-model temperature and 1σ error | keV |
 | `log_M200_Msun`, `log_M200_Error` | Halo mass (log₁₀), from the weak-lensing calibrated Leroy et al. (2026, in prep.) $M_{200}$–$L_{\rm X}$ relation | log₁₀(M☉) |
 | `R500_kpc`, `R200_kpc` | Overdensity radii, from the same Leroy et al. (2026) relation | kpc |
